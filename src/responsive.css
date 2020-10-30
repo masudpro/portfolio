@@ -1,0 +1,64 @@
+/* xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920, */
+
+
+
+    
+@media (max-width: 960px){
+    
+    .bannerContent{
+        height: 600px !important;
+        position: absolute;
+        top: 0px; 
+        padding-left: 50px;
+        padding-top: 25%;
+      }
+      #tsparticles{
+        height: 600px !important;
+      }
+      .tsparticles-canvas-el{
+        height: 600px !important;
+      }
+      .bannerContent h1{
+        font-size: 40px;
+      }
+      .aboutPhoto{
+          padding: 0px;
+        padding-top: 80px;
+      }
+  }      
+  
+  @media (max-width: 600px){
+    .mainMenu{
+      justify-content: space-between;
+    }
+    .PcVersionNav{
+      display: none;
+    }
+    .onlyMobile{
+      padding: 10px 15px !important;
+      display: block;
+    }
+    .bannerContent{
+        height: 500px !important;
+        position: absolute;
+        top: 0px; 
+        padding-left: 0px;
+        padding-top: 35%;
+      }
+      #tsparticles{
+        height: 500px !important;
+      }
+      .tsparticles-canvas-el{
+        height: 500px !important;
+      }
+    
+    .bannerContent h1{
+        font-size: 25px;
+        line-height: 20px;
+        margin-bottom: 0px !important;
+      }
+  }   
