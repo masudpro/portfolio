@@ -32,6 +32,27 @@
   }      
   
   @media (max-width: 600px){
+    .custom-heading {
+      height: 70px;
+      
+      }
+      .custom-heading::after {
+          top: 40px;
+          width: 180px;
+          background: #FF4F35;
+          transition: all .7s;
+          
+          }
+      section:hover .custom-heading::after {
+              width: 180px;
+              }
+      .custom-heading-shadow{
+          top: -10px;
+      }
+      .custom-heading h1{
+          font-size: 28px;
+      }
+      
     .mainMenu{
       justify-content: space-between;
     }
@@ -60,5 +81,12 @@
         font-size: 25px;
         line-height: 20px;
         margin-bottom: 0px !important;
+      }
+
+      .contactSocial ul li a{
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
       }
   }   

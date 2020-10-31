@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { Container, Grid } from '@material-ui/core';
 
@@ -18,52 +17,9 @@ const BorderLinearProgress = withStyles((theme) => ({
   },
 }))(LinearProgress);
 
-// Inspired by the former Facebook spinners.
-const useStylesFacebook = makeStyles((theme) => ({
-  root: {
-    position: 'relative',
-  },
-  bottom: {
-    color: theme.palette.grey[theme.palette.type === 'light' ? 200 : 700],
-  },
-  top: {
-    color: '#1a90ff',
-    animationDuration: '550ms',
-    position: 'absolute',
-    left: 0,
-  },
-  circle: {
-    strokeLinecap: 'round',
-  },
-}));
 
-function FacebookCircularProgress(props) {
-  const classes = useStylesFacebook();
 
-  return (
-    <div className={classes.root}>
-      <CircularProgress
-        variant="determinate"
-        className={classes.bottom}
-        size={40}
-        thickness={4}
-        {...props}
-        value={100}
-      />
-      <CircularProgress
-        variant="indeterminate"
-        disableShrink
-        className={classes.top}
-        classes={{
-          circle: classes.circle,
-        }}
-        size={40}
-        thickness={4}
-        {...props}
-      />
-    </div>
-  );
-}
+
 
 const useStyles = makeStyles({
   root: {
@@ -84,7 +40,7 @@ export default function Skills() {
                 </div>
             </div>
             <Grid container pt-xs={5} spacing={3} >
-        <Grid  item md={6}>
+        <Grid  item xs={12} md={6}>
         <h1>Html</h1> <BorderLinearProgress variant="determinate" value={100} />
         <h1>Css</h1> <BorderLinearProgress variant="determinate" value={100} />
        <h1>Javascript</h1> <BorderLinearProgress variant="determinate" value={92} />
@@ -93,7 +49,7 @@ export default function Skills() {
         <h1>Context Api</h1> <BorderLinearProgress variant="determinate" value={75} />
     
        </Grid>
-       <Grid  item md={6}>
+       <Grid  item xs={12} md={6}>
        <h1>Mongobd</h1> <BorderLinearProgress variant="determinate" value={70} />
         <h1>Express</h1> <BorderLinearProgress variant="determinate" value={72} />
        <h1>Php</h1> <BorderLinearProgress variant="determinate" value={82} />

@@ -28,66 +28,33 @@ export default function Blog() {
                 </div>
             </div>
             <br/>
-        <Grid container spacing={3} className="">
-            <Grid  item  md={6}>
+        <Grid container spacing={3}>
+            <Grid  item  md={4}>
                 <div className="singleBlog">
-                    <Grid container spacing={3} className="">
-                        <Grid  item sm={6} >
-                            <img src={blogImage} alt=""/>
-                        </Grid>
-                        <Grid  item sm={6} >
-                            <h1>Lorem ipsum dolor </h1>
-                            <p>sit amet, consectetur adipisicing elit. A quos similique omnis facilis vel mollitia nemo fugit quisquam consectetur, aut fuga dolor maxime praesentium quo, consequatur nam exercitationem incidunt est. <Link href="#" > More </Link> </p>
-                        </Grid>
-                    </Grid>
+                    <div className="blogContent">
+                        <h1>Why context API is better than Redux?</h1>
+                        <p>According to me, the main advantage of Context API over Redux is that instead of importing actions and using them we get to manipulate the state directly on the component we are currently on. Context API is also easy to set up and is as effective as Redux.<Link target="_blank" href="https://medium.com/@masudrana115353" > More </Link> </p>
+                    </div>
                 </div>
             </Grid>
-
-            <Grid  item  md={6}>
+            <Grid  item  md={4}>
                 <div className="singleBlog">
-                    <Grid container spacing={3} className="">
-                        <Grid  item sm={6} >
-                            <img src={blogImage} alt=""/>
-                        </Grid>
-                        <Grid  item sm={6} >
-                            <h1>Lorem ipsum dolor </h1>
-                            <p>sit amet, consectetur adipisicing elit. A quos similique omnis facilis vel mollitia nemo fugit quisquam consectetur, aut fuga dolor maxime praesentium quo, consequatur nam exercitationem incidunt est. <Link href="#" > More </Link> </p>
-                        </Grid>
-                    </Grid>
+                    <div className="blogContent">
+                        <h1>What is react JS for beginners?</h1>
+                        <p>React is a front-end library developed by Facebook. It is used for handling the view layer for web and mobile apps. ReactJS allows us to create reusable UI components. It is currently one of the most popular JavaScript libraries and has a strong foundation and large community behind it.<Link target="_blank" href="https://medium.com/@masudrana115353" > More </Link> </p>
+                    </div>
                 </div>
             </Grid>
-
-            <Grid  item  md={6}>
+            <Grid  item  md={4}>
                 <div className="singleBlog">
-                    <Grid container spacing={3} className="">
-                        <Grid  item sm={6} >
-                            <img src={blogImage} alt=""/>
-                        </Grid>
-                        <Grid  item sm={6} >
-                            <h1>Lorem ipsum dolor </h1>
-                            <p>sit amet, consectetur adipisicing elit. A quos similique omnis facilis vel mollitia nemo fugit quisquam consectetur, aut fuga dolor maxime praesentium quo, consequatur nam exercitationem incidunt est. <Link href="#" > More </Link> </p>
-                        </Grid>
-                    </Grid>
+                    <div className="blogContent">
+                        <h1>What should I learn before ReactJS?</h1>
+                        <p> HTML and CSS. Every front end developer starts their journey with HTML and CSS,JSX (Javascript XML) and Babel. In React you will work with JSX that looks like HTML and you can consider it like HTML-flavored JavaScript, Fundamentals of Javascript and ES6, Package Manager (Node + Npm), Git and CLI (Command Line Interface)<Link target="_blank" href="https://medium.com/@masudrana115353" > More </Link> </p>
+                    </div>
                 </div>
             </Grid>
-
-            <Grid  item  md={6}>
-                <div className="singleBlog">
-                    <Grid container spacing={3} className="">
-                        <Grid  item sm={6} >
-                            <img src={blogImage} alt=""/>
-                        </Grid>
-                        <Grid  item sm={6} >
-                            <h1>Lorem ipsum dolor </h1>
-                            <p>sit amet, consectetur adipisicing elit. A quos similique omnis facilis vel mollitia nemo fugit quisquam consectetur, aut fuga dolor maxime praesentium quo, consequatur nam exercitationem incidunt est. <Link href="#" > More </Link> </p>
-                        </Grid>
-                    </Grid>
-                </div>
-            </Grid>
-        
             
-            
-        
+           
         </Grid>
         </Container>
     </section>

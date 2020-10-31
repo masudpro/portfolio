@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { Container, Link } from '@material-ui/core';
+import emailjs from 'emailjs-com';
 import masudranaImage from '../Image/masudrana.jpg'
 
 const useStyles = makeStyles((theme) => ({
@@ -19,6 +20,36 @@ const useStyles = makeStyles((theme) => ({
 export default function Contact() {
   const classes = useStyles();
 
+
+
+
+
+
+
+// daynimic email
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('),I$masud#raNa&375170@.', 'template_jq6uo7p', e.target, 'user_sOZW1jKFLRL3D2AE6i7ge')
+      .then((result) => {
+        alert('Thank You Form Message Me. I will contact You soon.');
+          document.getElementById('email').value = '';
+          document.getElementById('name').value = '';
+          document.getElementById('subject').value = '';
+          document.getElementById('message').value = '';
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
+
+
+
+
+
+
+
   return (
    <section id="contact" className="contactSec">
         <Container >
@@ -30,54 +61,56 @@ export default function Contact() {
             </div>
             <br/>
             <Grid container spacing={3} >
-                <Grid  item xs={12} md={6}>
+            <Grid item xs={12}>
+              <div className="contactSocial">
+                <ul>
+                  <li><a target="_blank" href="https://www.facebook.com/masudpro1"> <i className="fa fa-facebook"></i> </a></li>
+                  <li><a target="_blank" href="https://twitter.com/masudpro"><i className="fa fa-twitter"></i> </a></li>
+                  <li><a target="_blank" href="https://github.com/masudpro"><i className="fa fa-github"></i></a></li>
+                  <li><a target="_blank" href="https://www.linkedin.com/in/masudpro/"><i className="fa fa-linkedin"></i></a></li>
+                  <li><a target="_blank" href="https://medium.com/@masudrana115353"><i class="fa fa-medium"></i></a></li>
+                          
+                </ul>
+              </div>
+              
+            </Grid>
+            <Grid item xs={12} md={5} lg={4}>
                 <div className="contactContent">
-                <img src={masudranaImage} alt=""/>
 			<h1>MD Masud Rana</h1>
-			<h2>Ajgora,Belkuchi</h2>
-			<h2>Sirajganj, Bangladesh</h2>
-			<h2>Phone: +8801759741129</h2>
-			<h2>Skype: masudprobd</h2>
-			<h2>Gmail: masudrana375176@gmail.com</h2>
-			<ul>
-				<li><a target="_blank" href="https://www.facebook.com/masudpro1"> <i className="fa fa-facebook"></i> </a></li>
-				<li><a target="_blank" href="https://twitter.com/masudpro"><i className="fa fa-twitter"></i> </a></li>
-				<li><a target="_blank" href="https://www.behance.net/masudpro"><i className="fa fa-github"></i></a></li>
-				<li><a target="_blank" href="https://www.linkedin.com/in/masudpro/"><i className="fa fa-linkedin"></i></a></li>
-				<li><a target="_blank" href="https://www.instagram.com/masudprobd/"><i className="fa fa-instagram"></i></a></li>
-                
-			</ul>
-			
+
+			<h2><span><i class="fa fa-map-marker"></i></span> Address</h2>
+      <div className="contactInfo">
+        <p>Ajgora,Belkuchi</p>
+        <p>Sirajganj, Bangladesh</p>
+      </div>
+      <h2><span><i class="fa fa-envelope"></i></span>  Email</h2>
+      <div className="contactInfo">
+        <p>masudrana375176@gmail.com</p>
+      </div>
+      <h2><span><i class="fa fa-phone-square"></i></span>  Mobile </h2>
+      <div className="contactInfo">
+        <p>+8801759741129</p>
+        <p>+8801824375176</p>
+      </div>
 	        	</div>
                 </Grid>
-                <Grid item  item xs={12} md={6}>
+                
+                <Grid item xs={12} md={7} lg={8}>
                 <div className="contact-form">
-                        <form>
-                            <div className="form-group">
-                              <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Your Name" />
-                            </div>
-                            <div className="form-group">
-                                <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
-                              </div>
-                            <div className="form-group">
-                              <select className="form-control custom-select mr-sm-2" id="exampleFormControlSelect1">
-                                  <option className="selected">Select Your Service</option>
-                                <option>Web Design</option>
-                                <option>Web Design</option>
-                                <option>Web Development</option>
-                                <option>Graphics Design</option>
-                                <option>Video Editing</option>
-                                <option>Digital marketing </option>
-                                <option>Seo</option>
-                                <option>Others</option>
-                              </select>
-                            </div>
-                            <div className="form-group">
-                              <textarea className="form-control" placeholder="Message" id="exampleFormControlTextarea1" rows="3"></textarea>
-                            </div>
-                            <Link mt={5} className="customButton" href="" >Send Me </Link>
-  
-                          </form>
+
+                <form  onSubmit={sendEmail}>
+                  <input id="name" type="text" name="name" placeholder="Your Name" />
+                  <input id="email" type="email" name="email" placeholder="yourmail@gmail.com" />
+                  <input id="subject" type="text" name="subject" placeholder="put a subject" />
+                  <textarea id="message" type="text" name="message" placeholder="Message"/>
+                  <input className="submitButton" type="submit" value="Send" />
+                </form>
+
+                    </div>
+                </Grid>
+                <Grid item xs={12}>
+                    <div className="copyRight">
+                      <p>Designed and developed by Masud Rana.All Rights Reserved by masudpro. </p>
                     </div>
                 </Grid>
             </Grid>
